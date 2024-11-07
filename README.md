@@ -48,7 +48,7 @@ RESTful API built with Flask for managing information about students (`Alumnos`)
    ```
 4. **Run the project**
    ```powershell
-   python api.py
+   python app.py
    ```
    The app will run on `http://127.0.0.1:5000/` by default
 

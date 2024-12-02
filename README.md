@@ -46,7 +46,10 @@ RESTful API built with Flask for managing information about students (`Alumnos`)
    ```powershell
    pip install -r requirements.txt
    ```
-4. **Run the project**
+4. **Set up the database**
+   ```powershell
+   python create_db.py
+5. **Run the project**
    ```powershell
    python api.py
    ```

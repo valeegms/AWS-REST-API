@@ -1,9 +1,6 @@
 import re
+import bcrypt
 
-def validate_id(id):
-    if not(id >= 0):
-        raise ValueError("El ID debe ser un número positivo")
-    return id
 
 def validate_nombres(nombres):
     if not nombres:
@@ -40,3 +37,10 @@ def validate_horasClase(horasClase):
     if not (0 <= horasClase <= 50):
         raise ValueError("Las horas de clase deben estar entre 0 y 50")
     return horasClase
+
+def validate_password(password):
+    if not password:
+        raise ValueError("La contraseña no puede estar vacía")
+    # Hash password
+    hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+    return hashed_password

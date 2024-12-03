@@ -1,6 +1,8 @@
 from database import db
 
 class ProfesorModel(db.Model):
+    __tablename__ = 'profesores'
+    
     id = db.Column(db.Integer, primary_key=True, autoincrement=True, unique=True)
     numeroEmpleado = db.Column(db.String(100), unique=True, nullable=False)
     nombres = db.Column(db.String(100), nullable=False)

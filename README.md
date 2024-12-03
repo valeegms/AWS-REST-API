@@ -51,7 +51,7 @@ RESTful API built with Flask for managing information about students (`Alumnos`)
    python create_db.py
 5. **Run the project**
    ```powershell
-   python api.py
+   python app.py
    ```
    The app will run on `http://127.0.0.1:5000/` by default
 
@@ -60,18 +60,18 @@ RESTful API built with Flask for managing information about students (`Alumnos`)
 |  Method  |  Endpoint     |  Description              |
 |----------|---------------|---------------------------|
 |GET       |`/alumnos`     |Get all students           |
-|GET       |`/alumnos/<id>`|Get a specific student     |
+|GET       |`/alumnos/<alumno_id>`|Get a specific student     |
 |POST      |`/alumnos`     |Add a new student          |
-|PUT       |`/alumnos<id>` |Full update a new student  |
-|PATCH     |`/alumnos<id>` |Partial update of a student|
-|DELETE    |`/alumnos<id>` |Delete a student           |
+|PUT       |`/alumnos/<alumno_id>` |Full update a new student  |
+|PATCH     |`/alumnos/<alumno_id>` |Partial update of a student|
+|DELETE    |`/alumnos/<alumno_id>` |Delete a student           |
 
 ### Profesor (Teacher) Endpoints
 |  Method  |  Endpoint        |  Description              |
 |----------|------------------|---------------------------|
 |GET       |`/profesores`     |Get all teachers           |
-|GET       |`/profesores/<id>`|Get a specific teacher     |
+|GET       |`/profesores/<profesor_id>`|Get a specific teacher     |
 |POST      |`/profesores`     |Add a new teacher          |
-|PUT       |`/profesores<id>` |Full update a new teacher  |
-|PATCH     |`/profesores<id>` |Partial update of a teacher|
-|DELETE    |`/profesores<id>` |Delete a teacher           |
+|PUT       |`/profesores/<profesor_id>` |Full update a new teacher  |
+|PATCH     |`/profesores/<profesor_id>` |Partial update of a teacher|
+|DELETE    |`/profesores/<profesor_id>` |Delete a teacher           |

@@ -93,10 +93,12 @@ class AlumnoFotoPerfil(Resource):
             abort(400, message='No se seleccionó un archivo')
         
         try:
-            with NamedTemporaryFile(delete=False) as tmp:
+            # Crear un archivo temporal para guardar la foto de perfil
+            with NamedTemporaryFile(delete=False) as tmp: 
                 photo.save(tmp.name)
-                file_path = tmp.name
-                filename = secure_filename(photo.filename)
+                file_path = tmp.name # Ruta del archivo temporal
+                filename = f"alumnos/{alumno_id}/{secure_filename(photo.filename)}"
+                
                 
                 upload_file_to_s3(file_path, filename)
                 
